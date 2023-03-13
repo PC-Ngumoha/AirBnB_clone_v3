@@ -3,8 +3,11 @@
 initialize the models package
 """
 
+from dotenv import load_dotenv
 from os import getenv
 
+
+load_dotenv()  # Load environment variables
 
 storage_t = getenv("HBNB_TYPE_STORAGE")
 

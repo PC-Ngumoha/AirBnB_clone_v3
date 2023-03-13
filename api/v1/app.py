@@ -3,11 +3,14 @@
 app.py - contains the app instantiation.
 """
 from api.v1.views import app_views
+from dotenv import load_dotenv
 from flask import Flask, jsonify
 from flask_cors import CORS
 from models import storage
 from os import getenv
 
+
+load_dotenv()  # Load environment variables
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
